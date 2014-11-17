@@ -1,0 +1,17 @@
+<h1>New Loan</h1>
+<form action="{% url 'loans:new' %}" method="post">
+	{% csrf_token %}
+	<input type="text" name="title" id="1" value="your title" />
+	<label for="1">Loan Name</label><br />
+
+	<input type="number" name="principal" id="2" value="1000000" />
+	<label for="2">Principal</label><br />
+
+	<input type="number" name="months" id="3" step="1" value="12" />
+	<label for="3">Number Of Months</label><br />
+
+	<input type="number" name="rate" id="4"  value="0.03" />
+	<label for="4">Annual Interest Rate</label><br />
+
+	<input type="submit" value="Add" />
+</form>

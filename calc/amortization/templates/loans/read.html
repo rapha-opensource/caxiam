@@ -1,0 +1,27 @@
+<h1>{{ schedule.title_text }}</h1>
+<ul>
+	<li>Total Repaid: ${{ schedule.total_repaid }}</li>
+	<li>Total Interest Paid: ${{ schedule.total_interest_paid }}</li>
+	<table>
+		<tr>
+			<th>Number</th>
+			<th>Principal</th>
+			<th>Interest</th>
+			<th>Cumulative Principal</th>
+			<th>Cumulative Interest</th>
+			<th>Principal Balance</th>
+
+				{% for payment in schedule.payments %}
+				<tr>
+					<td>{{payment.number}}</td>
+					<td>{{payment.principal}}</td>
+					<td>{{payment.interest}}</td>
+					<td>{{payment.cumulative_principal}}</td>
+					<td>{{payment.cumulative_interest}}</td>
+					<td>{{payment.principal_balance}}</td>
+				</tr>
+				{% endfor %}
+
+		</tr>
+	</table>
+</ul>

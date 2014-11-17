@@ -1,0 +1,11 @@
+{% if all_loans %}
+<li><a href="/loans/add">Add Loan</a></li>
+<h1>All Loans</h1>
+<ul>
+	{% for loan in all_loans %}
+	<li><a href="/loans/{{ loan.id }}/">{{ loan.title_text }}</a></li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No loans have been created yet.</p>
+{% endif %}
