@@ -8,12 +8,3 @@ class Loan(models.Model):
 
 	def __str__(self):
 		return self.title_text
-
-	def total_interest_paid(self):
-		return self.principal*self.annual_interest_rate
-
-	def total_repaid(self):
-		return self.principal+self.total_interest_paid()
-
-
-
