@@ -1,0 +1,14 @@
+first question's answer is in test1.py
+
+second question is a Django app.
+
+To install, create a virtual environment:
+
+virtualenv .venv
+. .venv/bin/activate
+pip install django
+
+cd calc
+./manage.py migrate
+./manange.py createsuperuser  
+./manage.py runserver
